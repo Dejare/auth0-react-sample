@@ -1,14 +1,19 @@
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
+import './componentStyle.css'
 
-const LoginButton = () => {
+const LoginButton = ({btnText, background, color}) => {
   const { loginWithRedirect } = useAuth0();
   return (
     <button
-      className="btn btn-primary btn-block"
+    style={{
+      padding: "1rem 1.5rem", 
+      border: "2px solid white",
+      background: `${background}`,
+      color: `${color}`}}
       onClick={() => loginWithRedirect()}
     >
-      Log In
+      {btnText}
     </button>
   );
 };

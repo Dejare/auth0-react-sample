@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;900&display=swap");
+@import url('http://fonts.cdnfonts.com/css/coolvetica-2');
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Nunito','Coolvetica',  'Montserrat', sans-serif;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%; 
+  background: #000000d0;
+}
+
+h1, h2, h3 {
+  font-family: 'Coolvetica';
+}
+.Secttwo{
+  width: 100%;
+  /* min-height: 100%;  */
+  background: #000000d0;
+}
+/*# sourceMappingURL=main.css.map */

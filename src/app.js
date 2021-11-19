@@ -5,7 +5,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { NavBar, Footer, Loading } from "./components";
 import { Home, Profile, ExternalApi } from "./views";
 import ProtectedRoute from "./auth/protected-route";
-
+import Auth0ProviderWithHistory from './auth0Provider';
 import "./app.css";
 
 const App = () => {
@@ -16,8 +16,9 @@ const App = () => {
   }
 
   return (
+    <Auth0ProviderWithHistory>
     <div id="app" className="d-flex flex-column h-100">
-      <NavBar />
+      {/* <NavBar /> */}
       <div className="container flex-grow-1">
         <Switch>
           <Route path="/" exact component={Home} />
@@ -25,8 +26,8 @@ const App = () => {
           <ProtectedRoute path="/external-api" component={ExternalApi} />
         </Switch>
       </div>
-      <Footer />
     </div>
+    </Auth0ProviderWithHistory>
   );
 };
 
